@@ -15,7 +15,6 @@ body {
     position: relative;
 }
 
-/* Видео позадина – цел екран */
 .video-bg {
     position: fixed;
     inset: 0;
@@ -33,34 +32,25 @@ body {
     position: relative;
     z-index: 1;
     padding: 1.5rem;
+
+    .brand {
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            height: 50px;
+        }
+    }
 }
 
-/* Горен бренд / наслов */
-.brand {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 2.2rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-}
-
-.brand-text {
-    color: #ffffff;
-}
-
-.brand-accent {
-    display: inline-block;
-    margin-left: 0.25rem;
-    color: #ff4b84;
-}
-
-/* Карта како на дизајнот */
 .card {
     max-width: 720px;
     margin: 0 auto;
     padding: 3rem 3.5rem;
     border-radius: 32px;
-    background: rgba(0, 0, 0, 0.72);
+    background: rgba(42, 42, 42, 0.762);
     backdrop-filter: blur(10px);
     text-align: center;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
@@ -79,7 +69,6 @@ body {
     text-transform: uppercase;
 }
 
-/* Countdown кружеви */
 .countdown {
     display: flex;
     justify-content: center;
@@ -113,7 +102,6 @@ body {
     color: #ff4b84;
 }
 
-/* Емаил поле + копче */
 .notify-form {
     display: flex;
     justify-content: center;
