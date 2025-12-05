@@ -13,7 +13,9 @@
             src="src/background-animation.mp4"
             muted
             autoplay
-            loop>
+            loop
+            playsinline
+            preload="auto">
         </video>
     </div>
 
@@ -49,6 +51,7 @@
                         class="email-input" 
                         placeholder="Enter your email address here..." 
                         required
+                        autocomplete="off"
                     />
                     <button type="submit" class="notify-button">
                         NOTIFY ME
