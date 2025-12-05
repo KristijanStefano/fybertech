@@ -135,6 +135,10 @@ body {
                 }
             }
         }
+
+        @media(max-width: 425px) {
+            padding: 10px;
+        }
     }
     
     .countdown {
