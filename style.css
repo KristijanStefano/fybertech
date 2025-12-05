@@ -36,11 +36,22 @@ body {
             scale: 0.98;
         }
 
+        &.mobile{
+            display: none;
+        }
+
         @media(max-width: 425px) {
-            top: auto;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
+            &.desktop{
+                display: none;
+            }
+
+            &.mobile{
+                display: block;
+                top: auto;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 15px;
+            }
         }
     }
 
@@ -69,6 +80,10 @@ body {
     
             img{
                 height: 50px;
+
+                @media(max-width: 425px) {
+                    height: 40px;
+                }
             }
         }
     
@@ -125,8 +140,8 @@ body {
     .countdown {
         display: flex;
         justify-content: center;
-        gap: 2.5rem;
-        margin-bottom: 2.5rem;
+        gap: 30px;
+        margin-bottom: 30px;
         
         .countdown-item {
             display: flex;
@@ -152,6 +167,19 @@ body {
             text-transform: uppercase;
             letter-spacing: 0.12em;
             color: #ff4b84;
+        }
+
+        @media(max-width: 425px) {
+            gap: 20px;
+            .count-number {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+    
+            .count-label {
+                font-size: 12px;
+            }
         }
     }
 
