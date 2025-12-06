@@ -131,7 +131,7 @@ body {
                 text-transform: uppercase;
 
                 @media(max-width: 768px) {
-                   font-size: 35px;
+                   font-size: 25px;
                    margin-top: 15px;
                 }
             }
