@@ -2,6 +2,8 @@
 const startDate = new Date("Dec 5, 2025 14:30:00");
 startDate.setDate(startDate.getDate() + 20);
 
+let countdownInterval;
+
 function updateCountdown() {
     const now = new Date().getTime();
     const distance = startDate.getTime() - now;
@@ -26,7 +28,12 @@ function updateCountdown() {
     hoursEl.parentElement.style.background = `conic-gradient(#fff ${100-((hours/24)*100)}%, rgba(255, 255, 255, 0.227) 0% 100%)`;
     minutesEl.parentElement.style.background = `conic-gradient(#fff ${100-((minutes/60)*100)}%, rgba(255, 255, 255, 0.227) 0% 100%)`;
     secondsEl.parentElement.style.background = `conic-gradient(#fff ${100-((seconds/60)*100)}%, rgba(255, 255, 255, 0.227) 0% 100%)`;
+    // Stop the interval once the countdown ends
+    if (distance <= 0 && countdownInterval) {
+        clearInterval(countdownInterval);
+    }
 }
 
 updateCountdown();
-setInterval(updateCountdown, 1000);
+countdownInterval = setInterval(updateCountdown, 1000);
+
