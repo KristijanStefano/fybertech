@@ -1,4 +1,4 @@
-// Фиксна почетна дата
+// Time Counter
 const startDate = new Date("Dec 5, 2025 14:30:00");
 startDate.setDate(startDate.getDate() + 20);
 
@@ -28,7 +28,7 @@ function updateCountdown() {
     hoursEl.parentElement.style.background = `conic-gradient(#fff ${100-((hours/24)*100)}%, rgba(255, 255, 255, 0.227) 0% 100%)`;
     minutesEl.parentElement.style.background = `conic-gradient(#fff ${100-((minutes/60)*100)}%, rgba(255, 255, 255, 0.227) 0% 100%)`;
     secondsEl.parentElement.style.background = `conic-gradient(#fff ${100-((seconds/60)*100)}%, rgba(255, 255, 255, 0.227) 0% 100%)`;
-    // Stop the interval once the countdown ends
+    
     if (distance <= 0 && countdownInterval) {
         clearInterval(countdownInterval);
     }
@@ -37,3 +37,16 @@ function updateCountdown() {
 updateCountdown();
 countdownInterval = setInterval(updateCountdown, 1000);
 
+// Password Enter
+const passwordForm = document.getElementById('password-form');
+const passwordInput = document.getElementById('password');
+
+passwordForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (passwordInput.value === '0000') {
+        window.location.href = 'https://www.apple.com';
+    } else {
+        alert('Password is incorrect...');
+        passwordInput.value = '';
+    }
+});

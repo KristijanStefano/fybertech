@@ -7,7 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="#" class="enter-password-link desktop">Enter with password</a>
+    <form class="password-input-wrapper desktop" id="password-form">
+        <input 
+            id="password" 
+            type="password" 
+            class="enter-password-link" 
+            placeholder="Enter with password" 
+            required 
+            name="password" 
+            autocomplete="off"/>
+        <button type="submit" class="password-submit-btn">
+            &#10148;
+        </button>
+    </form>
+
     <div class="video-bg">
         <video 
             src="src/background-animation.mp4"
@@ -77,7 +90,19 @@
                     </form>
 
             </div>
-             <a href="#" class="enter-password-link mobile">Enter with password</a>
+             <form class="password-input-wrapper mobile" id="password-form">
+                <input 
+                    id="password" 
+                    type="password" 
+                    class="enter-password-link" 
+                    placeholder="Enter with password" 
+                    required 
+                    name="password" 
+                    autocomplete="off"/>
+                <button type="submit" class="password-submit-btn">
+                    &#10148;
+                </button>
+            </form>
         </div>
     </div>
     <script src="script.js"></script>

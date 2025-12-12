@@ -16,27 +16,12 @@ body {
 
     }
 
-    .enter-password-link {
+    .password-input-wrapper {
         position: absolute;
-        padding: 6px 12px;
         top: 2%;
         left: 1%;
-        color: #ccc;
-        background: rgba(0, 0, 0, 0.293);
-        border-radius: 100px;
-        font-size: 14px;
-        cursor: pointer;
-        text-decoration: none;
-        transition:  0.2s ease-in;
-
-        &:hover{
-            color: #fff;
-        }
+        display: inline-block;
         
-        &:active{
-            scale: 0.98;
-        }
-
         &.mobile{
             display: none;
         }
@@ -53,6 +38,47 @@ body {
                 transform: translateX(-50%);
                 margin-top: 15px;
             }
+            
+        }
+
+    }
+    
+
+    .enter-password-link {
+        padding: 10px 20px;
+        color: #ccc;
+        background: rgba(0, 0, 0, 0.293);
+        border-radius: 100px;
+        font-size: 14px;
+        text-decoration: none;
+        transition:  0.2s ease-in;
+        border: none;
+        font-size: 13px;
+
+        &:focus{
+            outline: none;
+        }
+
+
+    }
+
+    .password-submit-btn {
+        position: absolute;
+        right: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: none;
+        background: transparent;
+        color: #aaa;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.2s ease-in background;
+
+        &:active {
+            transform: translateY(-50%) scale(0.95);
         }
     }
 
@@ -206,6 +232,20 @@ body {
             justify-content: center;
             align-items: center;
             gap: 0;
+
+            
+            @media(max-width: 768px) {
+                flex-direction: column;
+
+                .form__control,
+                .submit-contact{
+                    border-radius: 500px;
+                }
+
+                .submit-contact{
+                    margin-top: 15px;
+                }
+            }
         }
 
         .form__control {
@@ -237,18 +277,6 @@ body {
             }
         }
 
-        @media(max-width: 768px) {
-            flex-direction: column;
-
-            .email-input,
-            .submit-contact{
-                border-radius: 500px;
-            }
-
-            .submit-contact{
-                margin-top: 15px;
-            }
-        }
     }
 
     .form-group{
