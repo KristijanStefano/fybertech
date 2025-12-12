@@ -200,13 +200,15 @@ body {
         }
     }
 
-    .notify-form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0;
+    #contact-form {
+        .form-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+        }
 
-        .email-input {
+        .form__control {
             width: 360px;
             max-width: 70vw;
             padding: 0.9rem 1.2rem;
@@ -217,7 +219,7 @@ body {
             color: #333;
         }
         
-        .notify-button {
+        .submit-contact {
             padding: 0.9rem 1.6rem;
             border-radius: 0 500px 500px 0;
             border: none;
@@ -239,17 +241,26 @@ body {
             flex-direction: column;
 
             .email-input,
-            .notify-button{
+            .submit-contact{
                 border-radius: 500px;
             }
 
-            .notify-button{
+            .submit-contact{
                 margin-top: 15px;
             }
         }
     }
 
-    
+    .form-group{
+        position: relative;
+
+       .error-field{
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+       }
+    }
+
 }
 
 

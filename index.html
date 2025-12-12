@@ -56,23 +56,31 @@
                         <div class="count-label">Seconds</div>
                     </div>
                 </div>
-    
-                <form class="notify-form">
-                    <input 
-                        type="email" 
-                        class="email-input" 
-                        placeholder="Enter your email address here..." 
-                        required
-                        autocomplete="off"
-                    />
-                    <button type="submit" class="notify-button">
-                        NOTIFY ME
-                    </button>
-                </form>
+                    <form id="contact-form">
+                        <div class="form-box">
+                            <div class="form-group">
+                                <input 
+                                id="email" 
+                                type="email" 
+                                class="form__control" 
+                                placeholder="Enter your email address here..." 
+                                required
+                                name="email" 
+                                autocomplete="off"
+                                />
+                            </div>
+                            <button type="submit" class="submit-contact">
+                                NOTIFY ME
+                            </button>
+                        </div>
+                        <div class="form__response" style="margin-top: 10px;" role="status" aria-live="polite"></div>
+                    </form>
+
             </div>
              <a href="#" class="enter-password-link mobile">Enter with password</a>
         </div>
     </div>
     <script src="script.js"></script>
+    <script src="contact-form.js"></script>
 </body>
 </html>
